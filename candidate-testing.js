@@ -1,43 +1,97 @@
+
 const input = require('readline-sync');
 
 // TODO 2: modify your quiz app to ask 5 questions //
+const readlineSync = require( 'readline-sync' );
 
 // TODO 1.1a: Define candidateName // 
-let candidateName;
+let candidateName = "";
+
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
-let question;
-let correctAnswer;
-let candidateAnswer;
+let question = "Who was the first American woman in space? ";
+let candidateAnswer = "";
 
 
 //TODO: Variables for Part 2
 let questions;
-let correctAnswers;
+let correctAnswers = "Sally Ride";
 let candidateAnswers;
 
 
+"Who was the first American woman in space? ",
+"What year was the first moon landing? ",
+"What is the capital of France? ",
+"What is the largest planet in our solar system? "
+"what is the chemical symbol for water? "
+
+let correctAnswer = "Sally Ride"
+
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
+  function askQuestion() {
+    const readlineSync = require( 'readline-sync');
+    candidateName = readlineSync.question("Please enter your name: ");
+  }
 
 }
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-
-
+  function askQuestion() {
+    const readlineSync = require('readline-sync');
+    candidateAnswer = readlineSync.question(question);
+  }
+for (let i =0; i < questions.length; i++) {
+  candidateAnswer =
+  readlineSync.question(question[i]);
+    candidateAnswer.push(candidateAnswer);
+  }
 }
 
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
+  function gradedQuiz(candidateAnswer) {
+    if (candidateAnswer.toLowerCase() ===
+    correctAnswer.toLowerCase()) {
+      console.log("Correct!");
+    } else {
+      console.log('Incorrect. The correct answer is. ');
+    }
+  }
+
+  function gradedQuiz(candidateAnswer) {
+    let grade = 0;
+    for (let i = 0; i < correctAnswer.length; i++) {
+      if (candidateAnswer[i].toLowerCase() ===
+  correctAnswer[i].toLowerCase()) {
+    grade += 20;
+    }
+  }
+   //Return the grade
+   return grade;
+}
+
+//Function to run the entire program
+function runProgram() {
+  askForName();
+  askQuestion();
+  let grade = gradeQuiz(candidateAnswer);
+  console.log('You scored 90 out if 100.');
+}
+
+// Run the program
+runProgram();
 
 
 
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
-
+r
 
   return grade;
-}
+  return candidateAnswer.toLowerCase() ===
+  correctAnswer.toLowerCase() ? 1 : 0;
+  }
 
 function runProgram() {
   askForName();
@@ -46,7 +100,7 @@ function runProgram() {
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
-
+console.log('Hell0, !');
 // ----------- Don't write any code or change any code below this line ---------- //
 module.exports = {
   candidateName: candidateName,
@@ -59,3 +113,4 @@ module.exports = {
   gradeQuiz: gradeQuiz,
   runProgram: runProgram
 };
+
