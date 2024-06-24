@@ -19,11 +19,7 @@ describe("Candidate Testing solution", function() {
 
   // correctAnswer tests //
 	it("Test 4. Data type of correctAnswer is string", function() {
-    console.log("correctAnswer:",
-    solution.correctAnswer, typeof
-    solution.correctAnswer); // Debugging line
-    expect(typeof solution.correctAnswer).toBe("string");
-    let correctAnswer = "typeof";
+		expect(typeof solution.correctAnswer).toBe("string");
 	});
 
   it("Test 5. correctAnswer gives the correct answer", function() {
@@ -51,16 +47,11 @@ describe("Candidate Testing solution", function() {
 
   // correctAnswers tests //
 	it("Test 9. correctAnswers array contains 5 answers", function() {
-		console.log("correctAnswer:",
-    solution.correctAnswer, typeofsolution.correctAnswer); // Debugging line
-    expect(solution.correctAnswers.length).toBe(5);
-	
-  });
+		expect(solution.correctAnswers.length).toBe(5);
+	});
 
   it("Test 10. correctAnswers Array contains the correct answers", function() {
-		console.log("correctAnswer:",
-    solution.correctAnswer, typeofsolution.correctAnswer); // Debugging line
-    expect(solution.correctAnswers).toContain("Sally Ride");
+		expect(solution.correctAnswers).toContain("Sally Ride");
     expect(solution.correctAnswers).toContain("true");
     expect(solution.correctAnswers).toContain("40");
     expect(solution.correctAnswers).toContain("Trajectory");
@@ -106,10 +97,4 @@ describe("Candidate Testing solution", function() {
 
 	
  
- });
-
-
-
-
-
- 
+ })
