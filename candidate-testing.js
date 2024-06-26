@@ -1,3 +1,4 @@
+const { parseSync } = require('@babel/core');
 const input = require('readline-sync');
 
 // TODO 2: modify your quiz app to ask 5 questions //
@@ -19,7 +20,7 @@ let candidateAnswers;
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
   let candidateName = input.question( 'Please enter your name:');
-  console.log("Candidate's name is: " + candidateName);
+  console.log("\nCandidate's name is: " + candidateName);
 }
 
 function askQuestion() {
@@ -44,6 +45,8 @@ function gradeQuiz(candidateAnswers) {
 
 
 
+
+
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
 
 
@@ -53,7 +56,7 @@ function gradeQuiz(candidateAnswers) {
 function runProgram() {
   askForName();
   // TODO 1.1c: Greet candidate using their name //
-   console.log();
+   console.log(`Hello, ${candidateName}! Welcome to the quiz.\n`);
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
