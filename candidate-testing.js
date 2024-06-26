@@ -18,14 +18,16 @@ let candidateAnswers;
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-  let candidateName = prompt("Please enter your name:");
-  console.log("Candidate's name is:" + candidateName);
+  let candidateName = input.question( 'Please enter your name:');
+  console.log("Candidate's name is: " + candidateName);
 }
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-candidateAnswer = prompt("Who was the first American woman in space?");
-
+  for (let i = 0; i < input.question; i++) {
+    let answer = input.question(questions[i]);
+    candidateAnswers.push(answer);
+  }
 }
 
 function gradeQuiz(candidateAnswers) {
@@ -36,6 +38,8 @@ function gradeQuiz(candidateAnswers) {
 } else {
     console.log("Sorry, " + candidateName + ". The correct answer is " + correctAnswer + ".");
 }
+
+
 
 
 
