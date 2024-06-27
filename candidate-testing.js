@@ -29,7 +29,7 @@ let correctAnswers = [
 
 
 
-let candidateAnswers =[];
+
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
@@ -37,13 +37,12 @@ function askForName() {
   console.log("\nCandidate's name is: " + candidateName);
 }
 
-
+let candidateAnswers =[];
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
     for (let i = 0; i < questions.length; i++) {
       let candidateAnswer = input.question(`${i + 1}) ${questions[i]}`);
-      candidateAnswers.push(candidateAnswer ?
-      candidateAnswer.trim() : '');
+      candidateAnswers [i] = candidateAnswer;
     }
   }
     
