@@ -37,6 +37,7 @@ function askForName() {
   console.log("\nCandidate's name is: " + candidateName);
 }
 
+
 let candidateAnswers =[];
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
@@ -68,7 +69,7 @@ function gradeQuiz(candidateAnswers) {
 
   let grade = (numCorrect / questions.length) * 100;
   console.log(`>>> Overall Grade: ${grade}% (${numCorrect} of ${questions.length} responses correct) <<<`);
-  console.log(`>>> Status: ${grade >= 60 ? 'PASSED' : 'FAILED'} <<<`);
+  console.log(`>>> Status: ${grade >= 80 ? 'PASSED' : 'FAILED'} <<<`);
 
 
 
@@ -85,7 +86,7 @@ function runProgram() {
   // TODO 1.1c: Greet candidate using their name //
    console.log(`Hello, ${candidateName} Welcome to the quiz!\n`);
   askQuestion();
-  gradeQuiz(this.candidateAnswer);
+  gradeQuiz(this.candidateAnswers);
 }
 
 
